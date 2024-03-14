@@ -103,6 +103,7 @@
                     class="form-control" 
                     name="categories"
                     id="categories"
+                    [(ngModel)]="model.categories"
                     multiple>
                     <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
                 </select>

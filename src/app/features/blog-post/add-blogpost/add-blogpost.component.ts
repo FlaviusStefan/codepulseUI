@@ -26,7 +26,8 @@ categories$?: Observable<Category[]>;
       featuredImageUrl: '',
       author: '',
       isVisible: true,
-      publishedDate: new Date()
+      publishedDate: new Date(),
+      categories: []
     }
   }
 
@@ -35,6 +36,7 @@ categories$?: Observable<Category[]>;
   }
 
   onFormSubmit(): void {
+    console.log(this.model);
     this.blogPostService.createBlogPost(this.model).subscribe({
       next: (response) => {
         this.router.navigateByUrl('admin/blogposts');
