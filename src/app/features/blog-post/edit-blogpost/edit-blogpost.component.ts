@@ -18,6 +18,7 @@ export class EditBlogpostComponent implements OnInit, OnDestroy{
   model?: BlogPost;
   categories$?: Observable<Category[]>;
   selectedCategories?: string[];
+  isImageSelectorVisible: boolean = false;
 
   routeSubscription?: Subscription;
   getBlogPostSubscription?: Subscription;
@@ -76,7 +77,7 @@ export class EditBlogpostComponent implements OnInit, OnDestroy{
     }
   }
 
-  onDelete():void {
+  onDelete(): void {
     if(this.id){
       // call service and delete blogpost
       this.blogPostService.deleteBlogPost(this.id)
@@ -86,6 +87,14 @@ export class EditBlogpostComponent implements OnInit, OnDestroy{
         }
       })
     }
+  }
+
+  openImageSelector(): void {
+    this.isImageSelectorVisible = true;
+  }
+
+  closeImageSelector(): void {
+    this.isImageSelectorVisible = false;
   }
 
   ngOnDestroy(): void {
