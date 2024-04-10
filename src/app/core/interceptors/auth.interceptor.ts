@@ -28,6 +28,6 @@ export class AuthInterceptor implements HttpInterceptor {
   }
 
   private shouldInterceptRequest(request: HttpRequest<any>): boolean { 
-    return request.urlWithParams.indexOf('AddAuth=true', 0) > -1? true: false;
+    return request.urlWithParams.indexOf('addAuth=true', 0) > -1? true: false;
   }
 }

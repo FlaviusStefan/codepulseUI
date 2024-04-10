@@ -30,10 +30,12 @@ export class BlogPostService {
   }
 
   updateBlogPost(id: string, updatedBlogPost: UpdateBlogPost) : Observable<BlogPost> {
-    return this.http.put<BlogPost>(`${environment.apiBaseUrl}/api/blogposts/${id}?addAuth=true`, updatedBlogPost);
+    return this.http.put<BlogPost>(`${environment.apiBaseUrl}/api/blogposts/${id}?
+    addAuth=true`, updatedBlogPost);
   }
 
   deleteBlogPost(id: string) : Observable<BlogPost>{
-    return this.http.delete<BlogPost>(`${environment.apiBaseUrl}/api/blogposts/${id}?addAuth=true`);
+    return this.http.delete<BlogPost>(`${environment.apiBaseUrl}/api/blogposts/${id}?
+    addAuth=true`);
   }
 }
