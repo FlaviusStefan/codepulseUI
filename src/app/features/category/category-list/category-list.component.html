@@ -16,8 +16,36 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Name</th>
-                    <th>UrlHandle</th>
+                    <th>
+                        Name
+                        <span>
+                            <span>
+                                <button type="button" class="btn btn-light" (click)="sort('name', 'asc')">
+                                    <i class="bi bi-arrow-up-circle"></i>
+                                </button>
+                            </span>
+                            <span>
+                                <button type="button" class="btn btn-light" (click)="sort('name', 'desc')">
+                                    <i class="bi bi-arrow-down-circle"></i>
+                                </button>
+                            </span>
+                        </span>
+                    </th>
+                    <th>
+                        UrlHandle
+                        <span>
+                            <span>
+                                <button type="button" class="btn btn-light" (click)="sort('url', 'asc')">
+                                    <i class="bi bi-arrow-up-circle"></i>
+                                </button>
+                            </span>
+                            <span>
+                                <button type="button" class="btn btn-light" (click)="sort('url', 'desc')">
+                                    <i class="bi bi-arrow-down-circle"></i>
+                                </button>
+                            </span>
+                        </span>
+                    </th>
                     <th>Update</th>
                 </tr>
             </thead>
