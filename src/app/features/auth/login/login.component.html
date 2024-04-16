@@ -14,8 +14,11 @@
                     <input type="password" class="form-control" id="password" name="password" [(ngModel)]="model.password">
                 </div>
 
-                <div class="mt-3">
+               <div class="mt-3">
                     <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <div class="mt-3 text-center">
+                    <button type="button" class="btn btn-link" [routerLink]="['/register']">Don't have an account? Sign up now!</button>
                 </div>
             </form>
         </div>
